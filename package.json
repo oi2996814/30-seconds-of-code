@@ -1,0 +1,68 @@
+{
+  "name": "30-seconds-of-code",
+  "private": true,
+  "version": "10.0.0",
+  "description": "30 seconds of code website.",
+  "exports": "./index.js",
+  "author": "chalarangelo",
+  "type": "module",
+  "devDependencies": {
+    "@jsiqle/core": "^3.0.0",
+    "astro": "^3.2.0",
+    "chalk": "^5.3.0",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "front-matter": "^4.0.2",
+    "fs-extra": "^11.1.1",
+    "glob": "^10.3.10",
+    "hast-util-to-html": "^9.0.0",
+    "js-yaml": "^4.1.0",
+    "mdast-util-to-hast": "^13.0.2",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0",
+    "prismjs": "^1.29.0",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.0",
+    "sass": "^1.68.0",
+    "sharp": "^0.32.6",
+    "unist-util-select": "^5.0.0",
+    "unist-util-visit": "^5.0.0",
+    "unist-util-visit-parents": "^6.0.1",
+    "webfonts-generator": "^0.4.0"
+  },
+  "imports": {
+    "#blocks/*": "./src/blocks/*.js",
+    "#components/*": "./src/components/*.astro",
+    "#layouts/*": "./src/layouts/*.astro",
+    "#settings/*": "./src/settings/*.js",
+    "#prefabs": "./src/prefabs/index.js",
+    "#utils": "./src/utils/index.js",
+    "#utils/search": "./src/utils/search.js"
+  },
+  "scripts": {
+    "predev": "NODE_ENV=development node ./src/scripts/develop.js",
+    "dev": "astro dev --port 8000",
+    "start": "astro dev --port 8000",
+    "prebuild": "NODE_ENV=production node ./src/scripts/build.js",
+    "build": "astro build",
+    "preview": "astro preview --port 9000",
+    "console": "NODE_ENV=production node ./src/scripts/console.js",
+    "create": "NODE_ENV=production node ./src/scripts/create.js",
+    "icons": "NODE_ENV=production node ./src/scripts/icons.js",
+    "manifest": "NODE_ENV=production node ./src/scripts/manifest.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/30-seconds/30-seconds-of-code"
+  },
+  "bugs": {
+    "url": "https://github.com/30-seconds/30-seconds-of-code/issues"
+  },
+  "browserslist": [
+    "> 0.5% and last 4 versions and not dead and not ie>0 and not op_mini all and not and_uc>0 and not edge<79"
+  ],
+  "engines": {
+    "node": ">=18.14.2"
+  }
+}
